@@ -16,56 +16,68 @@ class Categorie extends React.Component {
         sections : [
 
             {
-    
-              titre: 'chapeaux',
-    
-              imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
-    
-              id: 1
-    
-            },
-    
-            {
-    
-              titre: 'vestes',
-    
-              imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-    
-              id: 2
-    
-            },
-    
-            {
-    
-              titre: 'baskets',
-    
-              imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-    
-              id: 3
-    
-            },
-    
-            {
-    
-              titre: 'femmes',
-    
-              imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-              taille: 'large',
-    
-              id: 4
-    
-            },
-    
-            {
-    
-              titre: 'hommes',
-    
-              imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-              taille: 'large',
-    
-              id: 5
-    
-            }
+
+                titre: 'chapeaux',
+      
+                imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      
+                id: 1,
+      
+                linkUrl: 'chapeaux'
+      
+              },
+      
+              {
+      
+                titre: 'vestes',
+      
+                imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      
+                id: 2,
+      
+                linkUrl: 'vestes'
+      
+              },
+      
+              {
+      
+                titre: 'baskets',
+      
+                imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      
+                id: 3,
+      
+                linkUrl: 'baskets'
+      
+              },
+      
+              {
+      
+                titre: 'femmes',
+      
+                imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      
+                taille: 'large',
+      
+                id: 4,
+      
+                linkUrl: 'femmes'
+      
+              },
+      
+              {
+      
+                titre: 'hommes',
+      
+                imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      
+                taille: 'large',
+      
+                id: 5,
+      
+                linkUrl: 'hommes'
+      
+              }
     
           ]
 
@@ -84,9 +96,9 @@ class Categorie extends React.Component {
       <div className="categories">
           {
 
-this.stage.sections.map(({titre, imageUrl, id, taille}) => (
+this.stage.sections.map(({id, ...autreSectionProps}) => (
 
-   <ChoixItem key={id} titre={titre} imageUrl={imageUrl} taille={taille} />
+    <ChoixItem key={id} {...autreSectionProps}/>
 
 ))
 
