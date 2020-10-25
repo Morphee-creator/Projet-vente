@@ -39,5 +39,22 @@
       border: 1px solid black;
   
     }
+
+    &.google-login {
+
+      background-color: #4285f4;
   
+      color: white;
+  
+  
+  
+      &:hover {
+  
+        background-color: #357ae8;
+  
+        border: none;
+  
+      }
+  
+    }
   }

@@ -3,6 +3,7 @@ import React from 'react'
 
 import FormInput from '../form-input/form-input.component' 
 import BoutonCustom from '../bouton-custom/bouton-custom.component'
+import { loginAvecGoogle } from '../../firebase/firebase.utils'
 import './login.styles.scss'
 
 
@@ -90,12 +91,15 @@ class Login extends React.Component {
             required />
 
           
-
+<div className='bouttons'>
 <BoutonCustom type="submit">
 
 Connecter
 
 </BoutonCustom>
+<BoutonCustom onClick={loginAvecGoogle} isGoogleLogin>Connecter avec Google
+</BoutonCustom>
+</div>
 
         </form>
 

@@ -6,9 +6,9 @@ import './bouton-custom.styles.scss'
 
 
 
-const BoutonCustom = ({ children, ...otherProps}) => (
+const BoutonCustom = ({ children, isGoogleLogin ,...otherProps}) => (
 
-  <button className='bouton-custom' {...otherProps}>
+  <button className={`${isGoogleLogin ? 'google-login' : ''} bouton-custom`} {...otherProps}>
 
     {children}
 
